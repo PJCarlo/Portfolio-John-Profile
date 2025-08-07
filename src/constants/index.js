@@ -18,7 +18,7 @@ export const PROJECTS = [
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, projects, and experiences.",
     technologies: ["React.js", "Tailwind CSS", "Node.js"],
-    link: "",
+    link: "https://portfolio-john-profile.vercel.app/",
   },
   {
     date: "May 2024 - December 2024",
