@@ -14,11 +14,18 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    date: "July 2025 - Currently Developing",
+    title: "Mensahe App",
+    description: "A Messaging Application that allows users to send and receive messages in real-time, with features like group chats, user tracker, file sharing, and notifications.",
+    technologies: ["Next.js", "Tailwind CSS", "Node.js", "MongoDB","Firebase", "Socket.io" ],
+    link: "",
+  },
+  {
     date: "May 2025 - June 2025",
     title: "Portfolio Website",
     description: "A personal portfolio website showcasing my skills, projects, and experiences.",
     technologies: ["React.js", "Tailwind CSS", "Node.js"],
-    link: "https://portfolio-john-profile.vercel.app/",
+    link: "",
   },
   {
     date: "May 2024 - December 2024",
