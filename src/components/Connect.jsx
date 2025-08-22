@@ -7,7 +7,7 @@ const Connect = () => {
   return (
     <div className="pb-10 lg:pt-4 lg:pb-12">
       <motion.h1 
-        variants={fadeIn('down', 0)}
+        variants={fadeIn('down', 0.5)}
         initial="hidden"
         whileInView="visible"
         viewport={{once: false, amount: 0}}
@@ -17,7 +17,7 @@ const Connect = () => {
         <div className="mb-10 lg:mb-12 flex justify-center items-center gap-3 text-white">
           <FaPhone className="cursor-pointer hover:text-green-400"/>
           <motion.span 
-            variants={fadeIn('left', 0.1)}
+            variants={fadeIn('left', 0.7)}
             initial="hidden"
             whileInView="visible" 
             viewport={{once: false, amount: 0}}
