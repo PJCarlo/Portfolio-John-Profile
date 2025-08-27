@@ -16,13 +16,7 @@ const Connect = () => {
       <div className="text-center tracking-tighter">  
         <div className="mb-10 lg:mb-12 flex justify-center items-center gap-3 text-white">
           <FaPhone className="cursor-pointer hover:text-green-400"/>
-          <motion.span 
-            variants={fadeIn('left', 0.7)}
-            initial="hidden"
-            whileInView="visible" 
-            viewport={{once: false, amount: 0}}
-            className="text-sm px-3 py-1 border border-purple-400 rounded-full">{CONTACT.phone}
-          </motion.span>
+          <span className="text-sm px-3 py-1 border border-purple-400 rounded-full">{CONTACT.phone}</span>
         </div>
         <div className="m-5 flex justify-center items-center gap-12 sm:gap-15 text-2xl text-white">
           <a href={`messagemeat:${CONTACT.facebook}`} target="profile" rel="facebookProfile" aria-label="Facebook">
