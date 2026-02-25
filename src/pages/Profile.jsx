@@ -32,7 +32,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <div className="flex flex-col flex items-center">
+      <div className="flex flex-col items-center">
         <motion.h1 
           variants={fadeIn('down', 0)}
           initial="hidden"

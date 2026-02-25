@@ -1,5 +1,5 @@
-import { CONTACT } from "../constants"
-import { FaPhone, FaFacebook, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { CONTACT } from "../constants";
+import { FaPhone, FaFacebook,FaInstagram, FaEnvelope, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn } from "../constants/variants";
 
@@ -19,13 +19,16 @@ const Connect = () => {
           <span className="text-sm px-3 py-1 border border-purple-400 rounded-full">{CONTACT.phone}</span>
         </div>
         <div className="m-5 flex justify-center items-center gap-12 sm:gap-15 text-2xl text-white">
-          <a href={`messagemeat:${CONTACT.facebook}`} target="profile" rel="facebookProfile" aria-label="Facebook">
+          <a href={`https://www.facebook.com/${CONTACT.facebook}`} target="profile" rel="facebookProfile" aria-label="Facebook">
             <FaFacebook className="cursor-pointer hover:text-blue-600" />
           </a>
-          <a href={`mailto:${CONTACT.email}`} target="email" rel="directEmail" aria-label="Email">
-            <FaEnvelope className="cursor-pointer hover:text-gray-400" />
+          <a href={`https://www.instagram.com/${CONTACT.instagram}`} target="profile" rel="instagramProfile" aria-label="Instagram">
+            <FaInstagram className="cursor-pointer hover:text-pink-700" />
           </a>
-          <a href={`connecton:${CONTACT.linkedIn}`} target="connect" rel="linkedInConnect" aria-label="LinkedIn">
+          <a href={`https://mail.google.com/mail/u/0/${CONTACT.email}`} target="email" rel="directEmail" aria-label="Email">
+            <FaEnvelope className="cursor-pointer hover:text-red-500" />
+          </a>
+          <a href={`https://www.linkedin.com/in/${CONTACT.linkedIn}`} target="connect" rel="linkedInConnect" aria-label="LinkedIn">
             <FaLinkedin className="cursor-pointer hover:text-blue-500" />
           </a>
         </div>

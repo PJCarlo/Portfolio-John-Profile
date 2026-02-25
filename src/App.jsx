@@ -1,11 +1,23 @@
 import { Element } from "react-scroll";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
-import Profile from "./components/Profile";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Connect from "./components/Connect";
+import Profile from "./pages/Profile";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Connect from "./pages/Connect";
+import SkeletonLoader from "./components/SkeletonLoader";
 
 const App = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased selection:bg-neutral-800 selection:text-neutral-300">
       <div className="fixed top-0 -z-10 h-full w-full">
@@ -17,21 +29,26 @@ const App = () => {
         <Navbar />
       </div>
 
+      {/* Skeleton Loader */}
+      {isLoading && <SkeletonLoader />}
+
       {/* Content */}
-      <div className="container mx-auto px-8">
-        <Element name="home">
-          <Profile />
-        </Element>
-        <Element name="about">
-          <About />
-        </Element>
-        <Element name="projects">
-          <Projects />
-        </Element>
-        <Element name="connect">
-          <Connect />
-        </Element>
-      </div>
+      {!isLoading && (
+        <div className="container mx-auto px-8">
+          <Element name="home">
+            <Profile />
+          </Element>
+          <Element name="about">
+            <About />
+          </Element>
+          <Element name="projects">
+            <Projects />
+          </Element>
+          <Element name="connect">
+            <Connect />
+          </Element>
+        </div>
+      )}
     </div>
   );
 };

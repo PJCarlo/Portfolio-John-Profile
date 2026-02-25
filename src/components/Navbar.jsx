@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const toggleMenu = () => openMenu(!menuOpen);
 
-  const navItems = [
+const navItems = [
     { name: "Home", to: "home" },
     { name: "About", to: "about" },
     { name: "Projects", to: "projects" },
@@ -34,7 +34,7 @@ const Navbar = () => {
       </div>
 
       <div className="pr-14 hidden md:flex justify-center flex-1">
-        <div className="flex space-x-8 border border-purple-200 bg-white/10 backdrop-blur-md rounded-full px-6 md:px-4 py-1.5 lg:py-2 text-white text-lg font-medium shadow-md">
+        <div className="flex space-x-8 px-6 md:px-4 py-1.5 lg:py-2 text-white text-lg font-medium shadow-md">
           {navItems.map((item) => (
             <Link
               key={item.to}
